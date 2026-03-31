@@ -530,14 +530,22 @@ h3 {
 
 .contact-cards {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 16px;
   margin-top: 28px;
+}
+
+.contact-card {
+  min-width: 0;
+  padding: 22px;
 }
 
 .contact-card span {
   display: block;
   color: var(--muted);
+  font-size: clamp(0.98rem, 0.85rem + 0.35vw, 1.15rem);
+  line-height: 1.45;
+  overflow-wrap: anywhere;
 }
 
 .consultation-form,
