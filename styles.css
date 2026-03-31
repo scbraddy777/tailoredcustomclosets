@@ -1,0 +1,746 @@
+:root {
+  --bg: #f6f2eb;
+  --surface: #fffdf9;
+  --surface-strong: #f1e8dc;
+  --surface-contrast: #24372d;
+  --text: #1b241f;
+  --muted: #5f6d64;
+  --line: rgba(27, 36, 31, 0.12);
+  --primary: #35553e;
+  --primary-hover: #284331;
+  --accent: #c7a16a;
+  --accent-soft: rgba(199, 161, 106, 0.14);
+  --white: #ffffff;
+  --shadow: 0 20px 50px rgba(24, 35, 28, 0.12);
+  --radius-lg: 28px;
+  --radius-md: 20px;
+  --radius-sm: 14px;
+  --container: min(1120px, calc(100vw - 40px));
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(199, 161, 106, 0.16), transparent 28%),
+    linear-gradient(180deg, #fbf8f3 0%, var(--bg) 100%);
+  color: var(--text);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.container {
+  width: var(--container);
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  backdrop-filter: blur(16px);
+  background: rgba(251, 248, 243, 0.82);
+  border-bottom: 1px solid rgba(27, 36, 31, 0.08);
+}
+
+.nav-shell {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 88px;
+}
+
+.brand img,
+.footer-logo {
+  width: 210px;
+  height: auto;
+}
+
+.desktop-nav,
+.mobile-menu {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.desktop-nav a,
+.mobile-menu a {
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.desktop-nav a:hover,
+.mobile-menu a:hover {
+  color: var(--text);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 22px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-size: 0.95rem;
+  font-weight: 700;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button-primary {
+  background: var(--primary);
+  color: var(--white);
+  box-shadow: 0 12px 30px rgba(53, 85, 62, 0.18);
+}
+
+.button-primary:hover {
+  background: var(--primary-hover);
+}
+
+.button-secondary {
+  background: rgba(255, 255, 255, 0.72);
+  border-color: rgba(53, 85, 62, 0.18);
+  color: var(--text);
+}
+
+.button-secondary:hover {
+  border-color: rgba(53, 85, 62, 0.36);
+  background: var(--white);
+}
+
+.nav-toggle {
+  display: none;
+  width: 52px;
+  height: 52px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--surface);
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  margin: 4px auto;
+  background: var(--text);
+  border-radius: 99px;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 16px;
+  width: var(--container);
+  margin: 0 auto;
+  padding: 0 0 20px;
+}
+
+.mobile-menu.is-open {
+  display: flex;
+}
+
+.hero,
+.subpage-hero {
+  padding: 72px 0 48px;
+}
+
+.hero-grid,
+.subpage-grid,
+.story-grid,
+.consultation-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 48px;
+  align-items: center;
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+  color: var(--primary);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+}
+
+h1,
+h2 {
+  font-family: "Cormorant Garamond", serif;
+}
+
+h1 {
+  font-size: clamp(3.2rem, 5vw, 5.4rem);
+  max-width: 12ch;
+}
+
+h2 {
+  font-size: clamp(2.4rem, 4vw, 4rem);
+  max-width: 14ch;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+.hero-lead,
+.section-heading p,
+.story-copy p,
+.consultation-copy p,
+.trust-grid p,
+.service-card p,
+.process-card p,
+.financing-panel p,
+.info-panel,
+.finance-benefits p,
+.closing-panel p,
+.site-footer p {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.hero-copy {
+  padding-right: 12px;
+}
+
+.hero-actions,
+.closing-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 30px 0 26px;
+}
+
+.hero-points,
+.stack-list {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hero-points li,
+.stack-list li {
+  position: relative;
+  padding-left: 28px;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.hero-points li::before,
+.stack-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--primary));
+}
+
+.hero-visual {
+  position: relative;
+  min-height: 560px;
+}
+
+.hero-card {
+  position: absolute;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.hero-card img,
+.story-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-card-main {
+  inset: 0 80px 80px 0;
+}
+
+.hero-card-accent {
+  right: 0;
+  bottom: 0;
+  width: 42%;
+  height: 42%;
+  border: 10px solid rgba(255, 255, 255, 0.85);
+}
+
+.hero-stat {
+  position: absolute;
+  left: 28px;
+  bottom: 34px;
+  padding: 18px 20px;
+  border-radius: var(--radius-md);
+  background: rgba(36, 55, 45, 0.88);
+  color: var(--white);
+  box-shadow: 0 16px 36px rgba(24, 35, 28, 0.22);
+}
+
+.hero-stat span {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.78;
+}
+
+.hero-stat strong {
+  font-size: 1.15rem;
+}
+
+.trust-bar,
+.section {
+  padding: 40px 0 88px;
+}
+
+.trust-grid,
+.financing-panel,
+.closing-panel {
+  display: grid;
+  gap: 24px;
+  align-items: center;
+}
+
+.trust-grid {
+  grid-template-columns: 1.2fr 1.8fr;
+  padding: 28px 32px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.trust-label {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-weight: 800;
+}
+
+.trust-items,
+.services-grid,
+.process-grid,
+.finance-benefits {
+  display: grid;
+  gap: 20px;
+}
+
+.trust-items {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.trust-items article,
+.process-card,
+.service-card,
+.finance-benefits article,
+.contact-card,
+.info-panel {
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.74);
+}
+
+.section-heading {
+  margin-bottom: 34px;
+  text-align: center;
+}
+
+.section-heading.left-aligned {
+  text-align: left;
+}
+
+.section-heading h2 {
+  margin: 0 auto 14px;
+}
+
+.section-heading.left-aligned h2 {
+  margin-left: 0;
+}
+
+.services-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.service-card {
+  min-height: 240px;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.service-card:hover,
+.process-card:hover,
+.contact-card:hover,
+.finance-benefits article:hover {
+  transform: translateY(-4px);
+  border-color: rgba(53, 85, 62, 0.22);
+  box-shadow: 0 18px 34px rgba(24, 35, 28, 0.08);
+}
+
+.service-card h3,
+.process-card h3,
+.finance-benefits strong,
+.info-panel h2,
+.contact-card strong {
+  margin-bottom: 12px;
+}
+
+.service-card-accent {
+  background:
+    linear-gradient(180deg, rgba(199, 161, 106, 0.16), rgba(199, 161, 106, 0.06)),
+    var(--surface);
+}
+
+.service-card-accent a {
+  color: var(--primary);
+  font-weight: 800;
+}
+
+.section-contrast {
+  position: relative;
+}
+
+.section-contrast::before {
+  content: "";
+  position: absolute;
+  inset: 48px 0;
+  background: linear-gradient(180deg, rgba(36, 55, 45, 0.05), rgba(255, 255, 255, 0.32));
+  z-index: -1;
+}
+
+.story-image {
+  height: 580px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.story-notes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.story-notes span {
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--primary);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.process-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.process-card span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--primary);
+  font-weight: 800;
+}
+
+.financing-strip {
+  padding-top: 0;
+}
+
+.financing-panel,
+.closing-panel {
+  grid-template-columns: 1.7fr auto;
+  padding: 34px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(36, 55, 45, 0.98), rgba(53, 85, 62, 0.92));
+  color: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.financing-panel p,
+.closing-panel p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.financing-panel .eyebrow,
+.closing-panel .eyebrow {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.consultation-grid {
+  align-items: start;
+}
+
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.contact-card span {
+  display: block;
+  color: var(--muted);
+}
+
+.consultation-form,
+.widget-frame {
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: var(--shadow);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.form-full {
+  grid-column: 1 / -1;
+}
+
+label span {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid rgba(27, 36, 31, 0.14);
+  border-radius: 14px;
+  padding: 15px 16px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--text);
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    background-color 160ms ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: rgba(53, 85, 62, 0.42);
+  box-shadow: 0 0 0 4px rgba(53, 85, 62, 0.08);
+}
+
+.consultation-form .button {
+  margin-top: 20px;
+}
+
+.form-note {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.info-panel {
+  background:
+    linear-gradient(180deg, rgba(199, 161, 106, 0.14), rgba(199, 161, 106, 0.04)),
+    rgba(255, 255, 255, 0.82);
+}
+
+.finance-benefits {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.widget-frame iframe {
+  width: 100%;
+  min-height: 940px;
+  border: 0;
+  border-radius: 16px;
+  background: var(--white);
+}
+
+.site-footer {
+  padding: 38px 0 28px;
+  background: #18231c;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 32px;
+}
+
+.site-footer h3 {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  letter-spacing: 0;
+}
+
+.site-footer a {
+  display: block;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.site-footer a:hover {
+  color: var(--white);
+}
+
+.footer-bottom {
+  margin-top: 26px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 1040px) {
+  .desktop-nav,
+  .header-cta {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: inline-block;
+  }
+
+  .hero-grid,
+  .subpage-grid,
+  .story-grid,
+  .consultation-grid,
+  .trust-grid,
+  .financing-panel,
+  .closing-panel,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid,
+  .process-grid,
+  .finance-benefits,
+  .trust-items {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero-copy {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero,
+  .subpage-hero {
+    padding-top: 44px;
+  }
+
+  .hero-visual {
+    min-height: 380px;
+  }
+
+  .hero-card-main {
+    inset: 0 28px 68px 0;
+  }
+
+  .hero-card-accent {
+    width: 46%;
+    height: 34%;
+  }
+
+  .hero-stat {
+    left: 14px;
+    right: 14px;
+    bottom: 12px;
+  }
+
+  .trust-bar,
+  .section {
+    padding: 30px 0 68px;
+  }
+
+  .services-grid,
+  .process-grid,
+  .finance-benefits,
+  .trust-items,
+  .contact-cards,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: clamp(2.6rem, 13vw, 4rem);
+  }
+
+  h2 {
+    font-size: clamp(2.1rem, 10vw, 3rem);
+  }
+
+  .consultation-form,
+  .widget-frame,
+  .trust-grid,
+  .financing-panel,
+  .closing-panel {
+    padding: 22px;
+  }
+
+  .brand img,
+  .footer-logo {
+    width: 180px;
+  }
+}
