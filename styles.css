@@ -873,6 +873,10 @@ textarea:focus {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.completed-work-grid-dense {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .gallery-shot {
   overflow: hidden;
   margin: 0;
@@ -888,6 +892,10 @@ textarea:focus {
 
 .gallery-shot-large {
   grid-column: span 2;
+}
+
+.completed-work-grid-dense .gallery-shot-large {
+  grid-column: span 3;
 }
 
 .gallery-shot img {
@@ -937,8 +945,13 @@ textarea:focus {
   .finance-benefits,
   .trust-items,
   .portfolio-grid,
-  .category-grid {
+  .category-grid,
+  .completed-work-grid-dense {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .completed-work-grid-dense .gallery-shot-large {
+    grid-column: span 2;
   }
 
   .detail-grid {
@@ -997,6 +1010,7 @@ textarea:focus {
     grid-template-columns: 1fr;
   }
 
+  .completed-work-grid-dense .gallery-shot-large,
   .gallery-shot-large {
     grid-column: span 1;
   }
