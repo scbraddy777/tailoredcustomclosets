@@ -191,6 +191,10 @@ textarea {
   padding: 72px 0 48px;
 }
 
+body[data-page="gallery"] .subpage-hero {
+  padding-bottom: 36px;
+}
+
 .hero-grid,
 .subpage-grid,
 .story-grid,
@@ -416,6 +420,22 @@ h3 {
 
 .section-heading.left-aligned h2 {
   margin-left: 0;
+}
+
+.gallery-section-heading {
+  margin-bottom: 22px;
+}
+
+.gallery-section-title {
+  margin: 0;
+  max-width: none;
+  color: var(--primary);
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(0.98rem, 1.55vw, 1.15rem);
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  line-height: 1.2;
+  text-transform: uppercase;
 }
 
 .services-grid {
@@ -916,6 +936,10 @@ textarea:focus {
 
 .compact-services-grid {
   margin-top: 24px;
+}
+
+body[data-page="gallery"] #gallery-categories.section {
+  padding-top: 26px;
 }
 
 @media (max-width: 1040px) {
