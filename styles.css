@@ -1,17 +1,17 @@
 :root {
-  --bg: #f6f2eb;
-  --surface: #fffdf9;
-  --surface-strong: #f1e8dc;
-  --surface-contrast: #24372d;
-  --text: #1b241f;
-  --muted: #5f6d64;
-  --line: rgba(27, 36, 31, 0.12);
-  --primary: #35553e;
-  --primary-hover: #284331;
-  --accent: #c7a16a;
-  --accent-soft: rgba(199, 161, 106, 0.14);
+  --bg: #eee7de;
+  --surface: #fdf8f1;
+  --surface-strong: #e7dccd;
+  --surface-contrast: #223329;
+  --text: #18211b;
+  --muted: #56625a;
+  --line: rgba(24, 33, 27, 0.14);
+  --primary: #334d38;
+  --primary-hover: #253b2c;
+  --accent: #ba955f;
+  --accent-soft: rgba(186, 149, 95, 0.15);
   --white: #ffffff;
-  --shadow: 0 20px 50px rgba(24, 35, 28, 0.12);
+  --shadow: 0 20px 50px rgba(20, 31, 24, 0.14);
   --radius-lg: 28px;
   --radius-md: 20px;
   --radius-sm: 14px;
@@ -30,8 +30,8 @@ body {
   margin: 0;
   font-family: "Manrope", sans-serif;
   background:
-    radial-gradient(circle at top left, rgba(199, 161, 106, 0.16), transparent 28%),
-    linear-gradient(180deg, #fbf8f3 0%, var(--bg) 100%);
+    radial-gradient(circle at top left, rgba(186, 149, 95, 0.14), transparent 28%),
+    linear-gradient(180deg, #f8f4ee 0%, var(--bg) 100%);
   color: var(--text);
 }
 
@@ -62,8 +62,8 @@ textarea {
   top: 0;
   z-index: 30;
   backdrop-filter: blur(16px);
-  background: rgba(251, 248, 243, 0.82);
-  border-bottom: 1px solid rgba(27, 36, 31, 0.08);
+  background: rgba(247, 240, 231, 0.88);
+  border-bottom: 1px solid rgba(24, 33, 27, 0.09);
 }
 
 .nav-shell {
@@ -142,7 +142,7 @@ textarea {
 }
 
 .button-secondary {
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.66);
   border-color: rgba(53, 85, 62, 0.18);
   color: var(--text);
 }
@@ -323,7 +323,7 @@ h3 {
   bottom: 0;
   width: 42%;
   height: 42%;
-  border: 10px solid rgba(255, 255, 255, 0.85);
+  border: 10px solid rgba(247, 240, 231, 0.88);
 }
 
 .hero-stat {
@@ -368,7 +368,7 @@ h3 {
   padding: 28px 32px;
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 251, 245, 0.76);
 }
 
 .trust-label {
@@ -398,7 +398,7 @@ h3 {
   padding: 24px;
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.74);
+  background: rgba(255, 251, 245, 0.78);
 }
 
 .section-heading {
@@ -469,7 +469,7 @@ h3 {
 
 .service-card-accent {
   background:
-    linear-gradient(180deg, rgba(199, 161, 106, 0.16), rgba(199, 161, 106, 0.06)),
+    linear-gradient(180deg, rgba(186, 149, 95, 0.18), rgba(186, 149, 95, 0.07)),
     var(--surface);
 }
 
@@ -486,7 +486,7 @@ h3 {
   content: "";
   position: absolute;
   inset: 48px 0;
-  background: linear-gradient(180deg, rgba(36, 55, 45, 0.05), rgba(255, 255, 255, 0.32));
+  background: linear-gradient(180deg, rgba(36, 55, 45, 0.07), rgba(255, 255, 255, 0.28));
   z-index: -1;
 }
 
@@ -605,7 +605,7 @@ h3 {
   padding: 28px;
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
-  background: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 251, 245, 0.84);
   box-shadow: var(--shadow);
 }
 
@@ -630,10 +630,10 @@ input,
 select,
 textarea {
   width: 100%;
-  border: 1px solid rgba(27, 36, 31, 0.14);
+  border: 1px solid rgba(24, 33, 27, 0.15);
   border-radius: 14px;
   padding: 15px 16px;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 252, 247, 0.92);
   color: var(--text);
   transition:
     border-color 160ms ease,
@@ -661,8 +661,8 @@ textarea:focus {
 
 .info-panel {
   background:
-    linear-gradient(180deg, rgba(199, 161, 106, 0.14), rgba(199, 161, 106, 0.04)),
-    rgba(255, 255, 255, 0.82);
+    linear-gradient(180deg, rgba(186, 149, 95, 0.15), rgba(186, 149, 95, 0.05)),
+    rgba(255, 251, 245, 0.84);
 }
 
 .finance-benefits {
@@ -756,7 +756,7 @@ textarea:focus {
   padding: 28px;
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
-  background: rgba(255, 255, 255, 0.78);
+  background: rgba(255, 251, 245, 0.8);
   box-shadow: 0 16px 34px rgba(24, 35, 28, 0.06);
 }
 
@@ -790,7 +790,7 @@ textarea:focus {
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
-  background: rgba(255, 255, 255, 0.78);
+  background: rgba(255, 251, 245, 0.8);
   box-shadow: 0 18px 34px rgba(24, 35, 28, 0.08);
 }
 
@@ -829,7 +829,7 @@ textarea:focus {
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 251, 245, 0.82);
   box-shadow: 0 18px 34px rgba(24, 35, 28, 0.08);
   color: inherit;
   transition:
@@ -882,7 +882,7 @@ textarea:focus {
   margin: 0;
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 251, 245, 0.82);
   box-shadow: 0 18px 34px rgba(24, 35, 28, 0.08);
   transition:
     transform 180ms ease,
