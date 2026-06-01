@@ -1000,7 +1000,7 @@ body[data-page="gallery"] #gallery-categories.section {
 @media (max-width: 720px) {
   .hero,
   .subpage-hero {
-    padding-top: 44px;
+    padding: 36px 0 32px;
   }
 
   .hero-visual {
@@ -1022,9 +1022,36 @@ body[data-page="gallery"] #gallery-categories.section {
     bottom: 12px;
   }
 
+  .hero-grid,
+  .subpage-grid,
+  .story-grid,
+  .consultation-grid {
+    gap: 28px;
+  }
+
   .trust-bar,
   .section {
-    padding: 30px 0 68px;
+    padding: 24px 0 56px;
+  }
+
+  h1,
+  h2 {
+    max-width: 100%;
+    text-wrap: balance;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 8.2vw, 3rem);
+    line-height: 0.98;
+  }
+
+  h2 {
+    font-size: clamp(1.7rem, 6.6vw, 2.35rem);
+    line-height: 1;
+  }
+
+  .section-heading {
+    margin-bottom: 24px;
   }
 
   .services-grid,
@@ -1053,24 +1080,61 @@ body[data-page="gallery"] #gallery-categories.section {
     height: 320px;
   }
 
-  h1 {
-    font-size: clamp(2.6rem, 13vw, 4rem);
-  }
-
-  h2 {
-    font-size: clamp(2.1rem, 10vw, 3rem);
-  }
-
   .consultation-form,
   .widget-frame,
   .trust-grid,
   .financing-panel,
-  .closing-panel {
-    padding: 22px;
+  .closing-panel,
+  .detail-card,
+  .service-card,
+  .contact-card,
+  .info-panel,
+  .portfolio-card-body,
+  .category-card-body {
+    padding: 20px;
   }
 
   .brand img,
   .footer-logo {
     width: 180px;
+  }
+
+  .hero-actions,
+  .closing-actions {
+    margin: 22px 0 20px;
+    gap: 12px;
+  }
+
+  .hero-points,
+  .stack-list {
+    gap: 10px;
+  }
+
+  .hero-points li,
+  .stack-list li {
+    padding-left: 24px;
+  }
+
+  .hero-points li::before,
+  .stack-list li::before {
+    top: 9px;
+    width: 8px;
+    height: 8px;
+  }
+
+  .gallery-section-heading {
+    margin-bottom: 10px;
+  }
+
+  .services-section-heading {
+    margin-bottom: 20px;
+  }
+
+  body[data-page="gallery"] .section {
+    padding: 18px 0 46px;
+  }
+
+  body[data-page="gallery"] #gallery-categories.section {
+    padding-top: 12px;
   }
 }
