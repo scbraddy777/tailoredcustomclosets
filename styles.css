@@ -191,10 +191,6 @@ textarea {
   padding: 72px 0 48px;
 }
 
-body[data-page="gallery"] .subpage-hero {
-  padding-bottom: 36px;
-}
-
 .hero-grid,
 .subpage-grid,
 .story-grid,
@@ -423,7 +419,7 @@ h3 {
 }
 
 .gallery-section-heading {
-  margin-bottom: 22px;
+  margin-bottom: 16px;
 }
 
 .gallery-section-title {
@@ -938,8 +934,12 @@ textarea:focus {
   margin-top: 24px;
 }
 
+body[data-page="gallery"] .section {
+  padding: 24px 0 52px;
+}
+
 body[data-page="gallery"] #gallery-categories.section {
-  padding-top: 26px;
+  padding-top: 18px;
 }
 
 @media (max-width: 1040px) {
