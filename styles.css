@@ -418,6 +418,16 @@ h3 {
   margin-left: 0;
 }
 
+.services-section-heading {
+  margin-bottom: 30px;
+}
+
+.services-section-title {
+  margin: 0;
+  max-width: clamp(13ch, 58vw, 40ch);
+  text-wrap: balance;
+}
+
 .gallery-section-heading {
   margin-bottom: 16px;
 }
