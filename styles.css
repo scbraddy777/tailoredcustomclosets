@@ -710,7 +710,7 @@ textarea:focus {
 .site-footer {
   padding: 38px 0 28px;
   background: #18231c;
-  color: rgba(255, 255, 255, 0.82);
+  color: rgba(255, 255, 255, 0.96);
 }
 
 .footer-grid {
@@ -723,16 +723,22 @@ textarea:focus {
   margin-bottom: 12px;
   font-size: 1rem;
   letter-spacing: 0;
+  color: var(--white);
 }
 
 .site-footer a {
   display: block;
   margin-bottom: 10px;
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .site-footer a:hover {
   color: var(--white);
+}
+
+.site-footer p,
+.site-footer .footer-bottom p {
+  color: rgba(255, 255, 255, 0.88);
 }
 
 .footer-bottom {
