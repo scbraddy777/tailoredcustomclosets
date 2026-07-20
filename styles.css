@@ -80,6 +80,10 @@ textarea {
   height: auto;
 }
 
+.site-footer .footer-logo {
+  filter: brightness(0) invert(1);
+}
+
 .desktop-nav,
 .mobile-menu {
   display: flex;
